@@ -84,7 +84,7 @@ function imc(){
 function ejercicio6(numero){
     if(numero>10){
         console.log("numero es mayor a 10")
-    }else if (numero>10){
+    }else if (numero<10){
         console.log("numero es menor a 10")
     }else{
         console.log("el numero es 10")
