@@ -1,26 +1,36 @@
 // Primer ejercicio
 
-var dividendo
-var divisor
+// var dividendo
+// var divisor
 
 function division(dividendo,divisor){
- if(dividendo== 0 ||divisor==0  ){
-     console.log("no se puede dividir estos dos numeros !!!")
- }else{
-     console.log(dividendo/divisor)
- }
+if(typeof(dividendo)=="number" && typeof(divisor)=="number"){// verificando que sea un numero
+    if(dividendo== 0 ||divisor==0  ){
+        console.log("no se puede dividir estos dos numeros !!!")
+    }else{
+        console.log(dividendo/divisor)
+    } 
+}else{
+    console.log("los datos ingresados no son números")
+}
+
 }
 
 //Segundo Ejercicio
 // Escribir un programa que en base a un número entero y muestre por pantalla si es par o impar.
 
 var numero 
+
 function multiploDeDos(numero){
-    if(numero %2==0){
-        console.log("Es un número par")
+    if(typeof(numero)=="number"){
+        if(numero %2==0){
+            console.log("Es un número par")
+        }else{
+            console.log("Es un número impar")
+        }
     }else{
-        console.log("Es un número impar")
-    }
+        console.log("los datos ingresados no son números")
+    }  
 }
 
 // Tercer Ejercicio 
@@ -32,11 +42,16 @@ var edad
 var ingresos 
 
 function tibutar(edad,ingresos){
-    if(edad>=19 && ingresos>= 2500000){
-        console.log("debes tributar!")
+    if(typeof(edad)=="number" && typeof(ingresos)=="number"){
+        if(edad>=19 && ingresos>= 2500000){
+            console.log("debes tributar!")
+        }else{
+            console.log("no debes tributar!")
+        }
     }else{
-        console.log("no debes tributar!")
+        console.log("los datos ingresados no son números")
     }
+   
 }
 
 // cuarto ejercicio 
@@ -44,11 +59,7 @@ function tibutar(edad,ingresos){
 var renta 
 
 function rentaAnual(renta){
-    // switch(renta){
-    //     case renta<10000:
-    //         console.log("pagas tanto");
-    //     case
-    // }
+   
     var pagar
     if(renta<10000){
         pagar = renta*0.05
@@ -74,9 +85,6 @@ function rentaAnual(renta){
 var imc
 function imc(imc){
 
-    // var peso 
-    // peso = imc*altura**2
-    // console.log("el peso es ",peso)
     if (imc<18.5){
         console.log("esta en bajo peso o deslgadez")
 
@@ -121,23 +129,30 @@ function ejercicio7(numero){
 
 // Octavo ejercicio 
 function ejercicio8(numero){
-  if (numero==1){
-      console.log("lunes")
-  }else if(numero == 2){
-    console.log("martes")
-  }else if (numero == 3){
-    console.log("miercoles")
 
-  }else if(numero == 4){
-    console.log("jueves")
+if(typeof(numero)=="number"){
 
-  }else if(numero == 5){
-    console.log("viernes")
-      
-  }else if(numero == 6){
-    console.log("sabado")
-
-  }else if(numero == 7){
-    console.log("domingo")
-  }
+    if (numero==1){
+        console.log("lunes")
+    }else if(numero == 2){
+      console.log("martes")
+    }else if (numero == 3){
+      console.log("miercoles")
+  
+    }else if(numero == 4){
+      console.log("jueves")
+  
+    }else if(numero == 5){
+      console.log("viernes")
+        
+    }else if(numero == 6){
+      console.log("sabado")
+  
+    }else if(numero == 7){
+      console.log("domingo")
+    }
+}else{
+    console.log("NaN")
+}
+ 
 }
