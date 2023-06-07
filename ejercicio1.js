@@ -72,11 +72,21 @@ function rentaAnual(renta){
 //Quinto Ejercicio 
 
 var imc
-var altura
-function imc(){
-    var peso 
-    peso = imc*altura**2
-    console.log("el peso es ",peso)
+function imc(imc){
+
+    // var peso 
+    // peso = imc*altura**2
+    // console.log("el peso es ",peso)
+    if (imc<18.5){
+        console.log("esta en bajo peso o deslgadez")
+
+    }else if (imc>18.5 && imc<24.9){
+        console.log("peso normal o peso saludable ")
+    }else if(imc >25 && imc<29.9){
+        console.log("tu peso está en sobrepeso")
+    }else if(imc>=30){
+        console.log("tu peso es obesidad")
+    }
 }
 
 
@@ -109,6 +119,7 @@ function ejercicio7(numero){
 }
 
 
+// Octavo ejercicio 
 function ejercicio8(numero){
   if (numero==1){
       console.log("lunes")
